@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "iFEQNJ5dwj/rNiRQuvE1ii8T/17DwsEJmq0hWmExXxpFvXd5KV5OO+xOetU44EG2oC0fqyEr0P/mRdd6ruwUew==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Roman Kostiuk\\source\\repos\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Auth.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Roman Kostiuk\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Roman Kostiuk\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.23.1\\microsoft.identitymodel.abstractions.6.23.1.nupkg.sha512",
+    "C:\\Users\\Roman Kostiuk\\.nuget\\packages\\microsoft.identitymodel.logging\\6.23.1\\microsoft.identitymodel.logging.6.23.1.nupkg.sha512",
+    "C:\\Users\\Roman Kostiuk\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.23.1\\microsoft.identitymodel.tokens.6.23.1.nupkg.sha512",
+    "C:\\Users\\Roman Kostiuk\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
