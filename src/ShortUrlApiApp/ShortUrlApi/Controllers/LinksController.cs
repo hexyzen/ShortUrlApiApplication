@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ShortUrlApi;
 using ShortUrlApi.Data;
+using ShortUrlApi.Model;
 
 namespace ShortUrlApi.Controllers
 {
@@ -30,9 +30,9 @@ namespace ShortUrlApi.Controllers
 
         // GET: api/Links/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Link>> GetLink(int id)
+        public async Task<ActionResult<Link>> GetLink(int LinkId)
         {
-            var link = await _context.Links.FindAsync(id);
+            var link = await _context.Links.FindAsync(LinkId);
 
             if (link == null)
             {
@@ -45,9 +45,9 @@ namespace ShortUrlApi.Controllers
         // PUT: api/Links/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutLink(int id, Link link)
+        public async Task<IActionResult> PutLink(int LinkId, Link link)
         {
-            if (id != link.Id)
+            if (LinkId != link.LinkId)
             {
                 return BadRequest();
             }
@@ -60,7 +60,7 @@ namespace ShortUrlApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!LinkExists(id))
+                if (!LinkExists(LinkId))
                 {
                     return NotFound();
                 }
@@ -81,14 +81,14 @@ namespace ShortUrlApi.Controllers
             _context.Links.Add(link);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetLink", new { id = link.Id }, link);
+            return CreatedAtAction("GetLink", new { LinkId = link.LinkId }, link);
         }
 
         // DELETE: api/Links/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteLink(int id)
+        public async Task<IActionResult> DeleteLink(int LinkId)
         {
-            var link = await _context.Links.FindAsync(id);
+            var link = await _context.Links.FindAsync(LinkId);
             if (link == null)
             {
                 return NotFound();
@@ -100,9 +100,9 @@ namespace ShortUrlApi.Controllers
             return NoContent();
         }
 
-        private bool LinkExists(int id)
+        private bool LinkExists(int LinkId)
         {
-            return _context.Links.Any(e => e.Id == id);
+            return _context.Links.Any(e => e.LinkId == LinkId);
         }
     }
 }

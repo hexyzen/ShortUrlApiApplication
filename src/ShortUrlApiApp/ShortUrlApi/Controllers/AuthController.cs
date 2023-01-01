@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ShortUrlApi.Interfaces;
 using ShortUrlApi.Model;
 
 namespace ShortUrlApi.Controllers
@@ -8,22 +9,33 @@ namespace ShortUrlApi.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private readonly ISecretHasher _secretHasher;
+
+        public AuthController(ISecretHasher secretHasher)
+        {
+            _secretHasher = secretHasher;
+
+        }
+
+
         private List<Account> Accounts => new List<Account>
         {
             new Account()
             {
-                Id = Guid.Parse("e2371dc9-a849-4f3c-9004-df8fc921c13a"),
+                Id = 2,
                 Email = "user@email.com",
+                UserName= "Test",
                 Password = "user",
-                Roles = new Role[] { Role.User }
+                RoleId = 1
             },
 
              new Account()
             {
-                Id = Guid.Parse("e2331dc9-a849-4f3c-9004-df8fc921c13a"),
+                Id = 3,
                 Email = "admin@email.com",
+                UserName= "Admin",
                 Password = "admin",
-                Roles = new Role[] { Role.Admin }
+                RoleId = 0
             }
 
 
@@ -34,11 +46,11 @@ namespace ShortUrlApi.Controllers
 
         public IActionResult Login([FromBody]Login request)
         {
-            var user = AuthenticateUser(request.Email, request.Password);
+            var user = AuthenticateUser(request.Username, request.Password);
             
             if (user != null)
             {
-
+                return BadRequest("The username or password is incorrect.");
             }
 
             return Unauthorized();
@@ -46,7 +58,13 @@ namespace ShortUrlApi.Controllers
 
         private Account AuthenticateUser(string email, string password)
         {
-            return Accounts.SingleOrDefault(u => u.Email == email && u.Password == password);
+            var userlogin = Accounts.SingleOrDefault(u => u.Email == email);
+            if (_secretHasher.Verify(password, userlogin.EncryptedPassword))
+            {
+                return Accounts.SingleOrDefault(u => u.Email == email && u.Password == password);
+            }
+
+            return null;
         }
 
     }

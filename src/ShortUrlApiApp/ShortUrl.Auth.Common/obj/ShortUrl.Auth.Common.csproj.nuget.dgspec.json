@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Roman Kostiuk\\source\\repos\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Auth.Common.csproj": {}
+    "C:\\Users\\Roman Kostiuk\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Auth.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Roman Kostiuk\\source\\repos\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Auth.Common.csproj": {
+    "C:\\Users\\Roman Kostiuk\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Auth.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Roman Kostiuk\\source\\repos\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Auth.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Roman Kostiuk\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Auth.Common.csproj",
         "projectName": "ShortUrl.Auth.Common",
-        "projectPath": "C:\\Users\\Roman Kostiuk\\source\\repos\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Auth.Common.csproj",
+        "projectPath": "C:\\Users\\Roman Kostiuk\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Auth.Common.csproj",
         "packagesPath": "C:\\Users\\Roman Kostiuk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Roman Kostiuk\\source\\repos\\ShortUrlApiApp\\ShortUrl.Auth.Common\\obj\\",
+        "outputPath": "C:\\Users\\Roman Kostiuk\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ShortUrlApi
+namespace ShortUrlApi.Model
 {
     public class Link
     {
-        public int Id { get; set; }
+        [MaxLength(5)]
+        public int LinkId { get; set; }
 
         [StringLength(200)]
         public string Linkfull { get; set; } = string.Empty;

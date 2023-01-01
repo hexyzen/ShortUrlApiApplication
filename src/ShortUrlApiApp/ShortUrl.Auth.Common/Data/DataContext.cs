@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShortUrlApi.Model;
 
 namespace ShortUrlApi.Data
 {
@@ -7,7 +8,8 @@ namespace ShortUrlApi.Data
 
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
         public DbSet<Link> Links { get; set; }
-         
+        public DbSet<Account> Accounts { get; set; }
+
 
     }
 }

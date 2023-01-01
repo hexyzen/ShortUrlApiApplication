@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using ShortUrl.Implementations;
 using ShortUrlApi.Data;
+using ShortUrlApi.Implementations;
+using ShortUrlApi.Interfaces;
 
 var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -11,6 +14,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<ISecretHasher, SecretHasher>();
+builder.Services.AddTransient<IJwtClaimsService, JwtClaimsService>();
 
 builder.Services.AddDbContext<DataContext>(options =>
 {

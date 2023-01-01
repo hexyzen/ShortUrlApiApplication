@@ -10,3 +10,15 @@ C:\Users\Roman Kostiuk\source\repos\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debu
 C:\Users\Roman Kostiuk\source\repos\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\refint\ShortUrl.Auth.Common.dll
 C:\Users\Roman Kostiuk\source\repos\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\ShortUrl.Auth.Common.pdb
 C:\Users\Roman Kostiuk\source\repos\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\ref\ShortUrl.Auth.Common.dll
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\bin\Debug\net6.0\ShortUrl.Auth.Common.deps.json
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\bin\Debug\net6.0\ShortUrl.Auth.Common.dll
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\bin\Debug\net6.0\ShortUrl.Auth.Common.pdb
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\ShortUrl.Auth.Common.csproj.AssemblyReference.cache
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\ShortUrl.Auth.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\ShortUrl.Auth.Common.AssemblyInfoInputs.cache
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\ShortUrl.Auth.Common.AssemblyInfo.cs
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\ShortUrl.Auth.Common.csproj.CoreCompileInputs.cache
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\ShortUrl.Auth.Common.dll
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\refint\ShortUrl.Auth.Common.dll
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\ShortUrl.Auth.Common.pdb
+C:\Users\Roman Kostiuk\Documents\GitHub\ShortUrlApiApplication\src\ShortUrlApiApp\ShortUrl.Auth.Common\obj\Debug\net6.0\ref\ShortUrl.Auth.Common.dll
