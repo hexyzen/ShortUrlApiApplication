@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShortUrlApi", "ShortUrlApi\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShortUrl.Common", "ShortUrl.Auth.Common\ShortUrl.Common.csproj", "{69FAAAA3-1E2E-4FC9-A21A-4048D6A1F929}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrl.Managers", "ShortUrl.Managers\ShortUrl.Managers.csproj", "{5F106C87-D3F8-464D-8BDB-F9C056C71084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortUrl.Accessors", "ShortUrl.Accessors\ShortUrl.Accessors.csproj", "{D03E2091-8060-46C1-9076-D5F05610416A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{69FAAAA3-1E2E-4FC9-A21A-4048D6A1F929}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69FAAAA3-1E2E-4FC9-A21A-4048D6A1F929}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69FAAAA3-1E2E-4FC9-A21A-4048D6A1F929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F106C87-D3F8-464D-8BDB-F9C056C71084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F106C87-D3F8-464D-8BDB-F9C056C71084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F106C87-D3F8-464D-8BDB-F9C056C71084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F106C87-D3F8-464D-8BDB-F9C056C71084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D03E2091-8060-46C1-9076-D5F05610416A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03E2091-8060-46C1-9076-D5F05610416A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03E2091-8060-46C1-9076-D5F05610416A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03E2091-8060-46C1-9076-D5F05610416A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

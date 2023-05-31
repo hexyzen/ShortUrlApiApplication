@@ -1,20 +1,22 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ShortUrlApi.Interfaces;
-using ShortUrlApi.Model;
+using Microsoft.IdentityModel.Tokens;
+using ShortUrl.Accessors.Entities;
+using ShortUrl.Accessors.Services.Interfaces;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace ShortUrlApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController : ControllerBase
+    public class UserController : Controller
     {
-        private readonly ISecretHasher _secretHasher;
-
-        public AuthController(ISecretHasher secretHasher)
+        public readonly IConfiguration _configuration;
+        public UserController(IConfiguration configuration)
         {
-            _secretHasher = secretHasher;
-
+            _configuration = configuration;
         }
 
 
@@ -38,33 +40,49 @@ namespace ShortUrlApi.Controllers
                 RoleId = 0
             }
 
-
         };
 
         [Route("login")]
         [HttpPost]
 
-        public IActionResult Login([FromBody]Login request)
+        public async Task<IActionResult> Login([FromBody] UserLogin userLogin)
         {
-            var user = AuthenticateUser(request.Username, request.Password);
-            
-            if (user != null)
+            Account userInfo = Accounts.SingleOrDefault(u => u.UserName == userLogin.Username && u.Password == userLogin.Password);
+            if (userInfo == null)
             {
-                return BadRequest("The username or password is incorrect.");
-            }
+                return StatusCode(StatusCodes.Status401Unauthorized);
 
-            return Unauthorized();
+            }
+            if (userInfo != null)
+            {
+                string token = await CreateUserJWTAcessToken(userInfo.UserName, userInfo.Id);
+                return Ok(token);
+            }
+            else
+            {
+                return StatusCode(StatusCodes.Status401Unauthorized);
+            }
         }
 
-        private Account AuthenticateUser(string email, string password)
+        private async Task<string> CreateUserJWTAcessToken(string userName, int userId)
         {
-            var userlogin = Accounts.SingleOrDefault(u => u.Email == email);
-            if (_secretHasher.Verify(password, userlogin.EncryptedPassword))
-            {
-                return Accounts.SingleOrDefault(u => u.Email == email && u.Password == password);
-            }
+            var claims = new[] {
+                    new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                    new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
+                    new Claim("UserName", userName),
+                    new Claim("UserId", userId.ToString()),
+                };
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var token = new JwtSecurityToken(
+                 _configuration["Jwt:Issuer"],
+                 _configuration["Jwt:Audience"],
+               claims,
+                  expires: DateTime.UtcNow.AddDays(10),
+                  signingCredentials: signIn);
 
-            return null;
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
     }

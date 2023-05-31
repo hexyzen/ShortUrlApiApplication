@@ -10336,24 +10336,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Roman Kostiuk\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\amork\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Roman Kostiuk\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Common.csproj",
+      "projectUniqueName": "C:\\Users\\amork\\OneDrive\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Common.csproj",
       "projectName": "ShortUrl.Common",
-      "projectPath": "C:\\Users\\Roman Kostiuk\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Common.csproj",
-      "packagesPath": "C:\\Users\\Roman Kostiuk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Roman Kostiuk\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\obj\\",
+      "projectPath": "C:\\Users\\amork\\OneDrive\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\ShortUrl.Common.csproj",
+      "packagesPath": "C:\\Users\\amork\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\amork\\OneDrive\\Documents\\GitHub\\ShortUrlApiApplication\\src\\ShortUrlApiApp\\ShortUrl.Auth.Common\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Roman Kostiuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\amork\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10428,7 +10423,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

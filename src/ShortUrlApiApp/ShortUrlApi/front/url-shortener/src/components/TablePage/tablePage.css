@@ -1,0 +1,27 @@
+.table-page {
+  margin: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.add-url-form {
+  margin-bottom: 20px;
+}
+
+.add-url-form input[type="text"] {
+  padding: 5px;
+}
+
+.add-url-form button {
+  padding: 5px 10px;
+  margin-left: 10px;
+}

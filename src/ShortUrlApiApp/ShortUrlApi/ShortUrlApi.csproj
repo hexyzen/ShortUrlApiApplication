@@ -7,23 +7,33 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.9" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.9" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <Compile Remove="front\**" />
+    <Content Remove="front\**" />
+    <EmbeddedResource Remove="front\**" />
+    <None Remove="front\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShortUrl.Accessors\ShortUrl.Accessors.csproj" />
     <ProjectReference Include="..\ShortUrl.Auth.Common\ShortUrl.Common.csproj" />
+    <ProjectReference Include="..\ShortUrl.Managers\ShortUrl.Managers.csproj" />
   </ItemGroup>
 
 </Project>
